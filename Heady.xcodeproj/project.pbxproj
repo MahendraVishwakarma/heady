@@ -33,6 +33,10 @@
 		2C00B73E24ED96B000CF7BCC /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C00B73D24ED96B000CF7BCC /* ProductListViewController.swift */; };
 		2C00B74024ED970700CF7BCC /* ProductList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C00B73F24ED970700CF7BCC /* ProductList.storyboard */; };
 		2C00B74224ED98E400CF7BCC /* ProductListWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C00B74124ED98E400CF7BCC /* ProductListWireFrame.swift */; };
+		2C00B74724EDA58D00CF7BCC /* ProductListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C00B74524EDA58D00CF7BCC /* ProductListCell.swift */; };
+		2C00B74824EDA58D00CF7BCC /* ProductListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C00B74624EDA58D00CF7BCC /* ProductListCell.xib */; };
+		2C00B74C24EDB4B200CF7BCC /* ProductVarientCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C00B74A24EDB4B200CF7BCC /* ProductVarientCell.swift */; };
+		2C00B74D24EDB4B200CF7BCC /* ProductVarientCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C00B74B24EDB4B200CF7BCC /* ProductVarientCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +80,10 @@
 		2C00B73D24ED96B000CF7BCC /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		2C00B73F24ED970700CF7BCC /* ProductList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductList.storyboard; sourceTree = "<group>"; };
 		2C00B74124ED98E400CF7BCC /* ProductListWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListWireFrame.swift; sourceTree = "<group>"; };
+		2C00B74524EDA58D00CF7BCC /* ProductListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCell.swift; sourceTree = "<group>"; };
+		2C00B74624EDA58D00CF7BCC /* ProductListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductListCell.xib; sourceTree = "<group>"; };
+		2C00B74A24EDB4B200CF7BCC /* ProductVarientCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVarientCell.swift; sourceTree = "<group>"; };
+		2C00B74B24EDB4B200CF7BCC /* ProductVarientCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductVarientCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +236,7 @@
 		2C00B70D24EC259E00CF7BCC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2C00B74924EDB48100CF7BCC /* Sub Views */,
 				2C00B73F24ED970700CF7BCC /* ProductList.storyboard */,
 				2C00B73D24ED96B000CF7BCC /* ProductListViewController.swift */,
 				2C00B74124ED98E400CF7BCC /* ProductListWireFrame.swift */,
@@ -288,6 +297,17 @@
 			children = (
 				2C00B73524ED68EB00CF7BCC /* CategoryListColCollectionViewCell.swift */,
 				2C00B73624ED68EB00CF7BCC /* CategoryListCollectionViewCell.xib */,
+			);
+			path = "Sub Views";
+			sourceTree = "<group>";
+		};
+		2C00B74924EDB48100CF7BCC /* Sub Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C00B74524EDA58D00CF7BCC /* ProductListCell.swift */,
+				2C00B74624EDA58D00CF7BCC /* ProductListCell.xib */,
+				2C00B74A24EDB4B200CF7BCC /* ProductVarientCell.swift */,
+				2C00B74B24EDB4B200CF7BCC /* ProductVarientCell.xib */,
 			);
 			path = "Sub Views";
 			sourceTree = "<group>";
@@ -374,6 +394,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C00B6EE24EC212A00CF7BCC /* LaunchScreen.storyboard in Resources */,
+				2C00B74824EDA58D00CF7BCC /* ProductListCell.xib in Resources */,
+				2C00B74D24EDB4B200CF7BCC /* ProductVarientCell.xib in Resources */,
 				2C00B74024ED970700CF7BCC /* ProductList.storyboard in Resources */,
 				2C00B73824ED68EB00CF7BCC /* CategoryListCollectionViewCell.xib in Resources */,
 				2C00B72C24ED4E6500CF7BCC /* CategoryList.storyboard in Resources */,
@@ -398,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C00B73324ED515100CF7BCC /* BaseViewController.swift in Sources */,
+				2C00B74C24EDB4B200CF7BCC /* ProductVarientCell.swift in Sources */,
 				2C00B73E24ED96B000CF7BCC /* ProductListViewController.swift in Sources */,
 				2C00B72324EC56D800CF7BCC /* SpashViewController.swift in Sources */,
 				2C00B71424EC29C100CF7BCC /* Protocols.swift in Sources */,
@@ -411,6 +434,7 @@
 				2C00B71224EC296400CF7BCC /* Networking.swift in Sources */,
 				2C00B73A24ED6A6E00CF7BCC /* CategoryDataModel.swift in Sources */,
 				2C00B72124EC539600CF7BCC /* SplashWireFrame.swift in Sources */,
+				2C00B74724EDA58D00CF7BCC /* ProductListCell.swift in Sources */,
 				2C00B71A24EC4FA600CF7BCC /* Constant.swift in Sources */,
 				2C00B72F24ED4F6F00CF7BCC /* CategoryListViewController.swift in Sources */,
 				2C00B73124ED4FAD00CF7BCC /* CategoryListWireFrame.swift in Sources */,

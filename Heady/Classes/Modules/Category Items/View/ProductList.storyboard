@@ -82,17 +82,26 @@
                                     <constraint firstItem="VJW-Hf-m3s" firstAttribute="leading" secondItem="bQ8-9U-yNe" secondAttribute="trailing" id="xwf-FR-oY8"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wYg-eW-g6s">
+                                <rect key="frame" x="0.0" y="108" width="414" height="754"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="wYg-eW-g6s" firstAttribute="leading" secondItem="2cj-Dw-OVz" secondAttribute="leading" id="EhU-Ob-bCf"/>
                             <constraint firstItem="uun-ve-0J9" firstAttribute="top" secondItem="2cj-Dw-OVz" secondAttribute="top" id="GRE-f0-gku"/>
                             <constraint firstItem="uun-ve-0J9" firstAttribute="leading" secondItem="d7c-SA-pRP" secondAttribute="leading" id="SG1-fS-auM"/>
+                            <constraint firstItem="wYg-eW-g6s" firstAttribute="top" secondItem="uun-ve-0J9" secondAttribute="bottom" id="W3p-EY-zMX"/>
+                            <constraint firstItem="2cj-Dw-OVz" firstAttribute="trailing" secondItem="wYg-eW-g6s" secondAttribute="trailing" id="a4J-Fw-sDA"/>
+                            <constraint firstItem="2cj-Dw-OVz" firstAttribute="bottom" secondItem="wYg-eW-g6s" secondAttribute="bottom" id="rDR-iQ-3Cm"/>
                             <constraint firstAttribute="trailing" secondItem="uun-ve-0J9" secondAttribute="trailing" id="ssH-MU-1ok"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2cj-Dw-OVz"/>
                     </view>
                     <connections>
                         <outlet property="headerNAme" destination="aPD-fi-SIk" id="ZCQ-qx-WTb"/>
+                        <outlet property="productTableView" destination="wYg-eW-g6s" id="RM5-bh-SBF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eYr-gj-XF2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

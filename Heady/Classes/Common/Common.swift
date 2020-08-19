@@ -15,10 +15,13 @@ enum StoryboardScenes: String {
     case kCategoryList              = "CategoryList"
     case kProductList               = "ProductList"
     
+    
 }
 
 enum CellIdentifires: String {
-    case kCategoryListCell = "CategoryListCollectionViewCell"
+    case kCategoryListCell          = "CategoryListCollectionViewCell"
+    case kProductListCell           = "ProductListCell"
+    case kProductVarient            = "ProductVarientCell"
 }
 
 extension StoryboardScenes {
@@ -70,4 +73,19 @@ public enum HttpsMethod{
 // API url
 enum AppURL: String {
     case categoryList = "https://stark-spire-93433.herokuapp.com/json"
+}
+
+
+//Product Colors
+
+enum ChooseColor {
+    case SetColor(String)
+    
+    var associatedColor: UIColor {
+        switch self {
+        case .SetColor(let value):
+            return PickColor.ColorName(name: value)
+    }
+    
+}
 }

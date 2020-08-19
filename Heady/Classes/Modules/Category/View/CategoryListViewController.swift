@@ -47,7 +47,6 @@ extension CategoryListViewController: UICollectionViewDataSource {
             cell.setData(category: category)
         }
         
-        
         return cell
     }
     
@@ -60,9 +59,9 @@ extension CategoryListViewController: UICollectionViewDelegate {
         
         if let productList  = ProductListWireframe.makeProductListViewRootController() as? ProductListViewController ?? nil {
             productList.headerName = viewModel?.categoryList?.categories[indexPath.row].name
+            productList.productList = viewModel?.categoryList?.categories[indexPath.row].products ?? []
             self.navigationController?.pushViewController(productList, animated: true)
         }
-        
         
     }
 }
