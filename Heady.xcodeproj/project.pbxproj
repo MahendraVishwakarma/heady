@@ -26,6 +26,13 @@
 		2C00B72F24ED4F6F00CF7BCC /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C00B72E24ED4F6F00CF7BCC /* CategoryListViewController.swift */; };
 		2C00B73124ED4FAD00CF7BCC /* CategoryListWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C00B73024ED4FAD00CF7BCC /* CategoryListWireFrame.swift */; };
 		2C00B73324ED515100CF7BCC /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C00B73224ED515100CF7BCC /* BaseViewController.swift */; };
+		2C00B73724ED68EB00CF7BCC /* CategoryListColCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C00B73524ED68EB00CF7BCC /* CategoryListColCollectionViewCell.swift */; };
+		2C00B73824ED68EB00CF7BCC /* CategoryListCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C00B73624ED68EB00CF7BCC /* CategoryListCollectionViewCell.xib */; };
+		2C00B73A24ED6A6E00CF7BCC /* CategoryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C00B73924ED6A6E00CF7BCC /* CategoryDataModel.swift */; };
+		2C00B73C24ED7E8E00CF7BCC /* CategoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C00B73B24ED7E8E00CF7BCC /* CategoryListViewModel.swift */; };
+		2C00B73E24ED96B000CF7BCC /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C00B73D24ED96B000CF7BCC /* ProductListViewController.swift */; };
+		2C00B74024ED970700CF7BCC /* ProductList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C00B73F24ED970700CF7BCC /* ProductList.storyboard */; };
+		2C00B74224ED98E400CF7BCC /* ProductListWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C00B74124ED98E400CF7BCC /* ProductListWireFrame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +69,13 @@
 		2C00B72E24ED4F6F00CF7BCC /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
 		2C00B73024ED4FAD00CF7BCC /* CategoryListWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListWireFrame.swift; sourceTree = "<group>"; };
 		2C00B73224ED515100CF7BCC /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		2C00B73524ED68EB00CF7BCC /* CategoryListColCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListColCollectionViewCell.swift; sourceTree = "<group>"; };
+		2C00B73624ED68EB00CF7BCC /* CategoryListCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryListCollectionViewCell.xib; sourceTree = "<group>"; };
+		2C00B73924ED6A6E00CF7BCC /* CategoryDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryDataModel.swift; sourceTree = "<group>"; };
+		2C00B73B24ED7E8E00CF7BCC /* CategoryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewModel.swift; sourceTree = "<group>"; };
+		2C00B73D24ED96B000CF7BCC /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		2C00B73F24ED970700CF7BCC /* ProductList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProductList.storyboard; sourceTree = "<group>"; };
+		2C00B74124ED98E400CF7BCC /* ProductListWireFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListWireFrame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,10 +181,9 @@
 		2C00B70824EC250A00CF7BCC /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				2C00B72D24ED4F4D00CF7BCC /* Storyboard */,
 				2C00B70C24EC258900CF7BCC /* View Model */,
 				2C00B70B24EC258200CF7BCC /* Model */,
-				2C00B70A24EC257900CF7BCC /* Controller */,
+				2C00B70A24EC257900CF7BCC /* View */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -180,23 +193,26 @@
 			children = (
 				2C00B70F24EC25B700CF7BCC /* View Model */,
 				2C00B70E24EC25B000CF7BCC /* Model */,
-				2C00B70D24EC259E00CF7BCC /* Controller */,
+				2C00B70D24EC259E00CF7BCC /* View */,
 			);
 			path = "Category Items";
 			sourceTree = "<group>";
 		};
-		2C00B70A24EC257900CF7BCC /* Controller */ = {
+		2C00B70A24EC257900CF7BCC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2C00B73424ED688F00CF7BCC /* Sub Views */,
+				2C00B72B24ED4E6500CF7BCC /* CategoryList.storyboard */,
 				2C00B72E24ED4F6F00CF7BCC /* CategoryListViewController.swift */,
 				2C00B73024ED4FAD00CF7BCC /* CategoryListWireFrame.swift */,
 			);
-			path = Controller;
+			path = View;
 			sourceTree = "<group>";
 		};
 		2C00B70B24EC258200CF7BCC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2C00B73924ED6A6E00CF7BCC /* CategoryDataModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -204,15 +220,19 @@
 		2C00B70C24EC258900CF7BCC /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				2C00B73B24ED7E8E00CF7BCC /* CategoryListViewModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
 		};
-		2C00B70D24EC259E00CF7BCC /* Controller */ = {
+		2C00B70D24EC259E00CF7BCC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2C00B73F24ED970700CF7BCC /* ProductList.storyboard */,
+				2C00B73D24ED96B000CF7BCC /* ProductListViewController.swift */,
+				2C00B74124ED98E400CF7BCC /* ProductListWireFrame.swift */,
 			);
-			path = Controller;
+			path = View;
 			sourceTree = "<group>";
 		};
 		2C00B70E24EC25B000CF7BCC /* Model */ = {
@@ -240,7 +260,6 @@
 		2C00B71D24EC534500CF7BCC /* Splash  */ = {
 			isa = PBXGroup;
 			children = (
-				2C00B72424EC56F600CF7BCC /* Storyboard */,
 				2C00B71F24EC536B00CF7BCC /* WireFrame */,
 				2C00B71E24EC536300CF7BCC /* Controller */,
 			);
@@ -250,6 +269,7 @@
 		2C00B71E24EC536300CF7BCC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2C00B72524EC570E00CF7BCC /* Splash.storyboard */,
 				2C00B72224EC56D800CF7BCC /* SpashViewController.swift */,
 			);
 			path = Controller;
@@ -263,20 +283,13 @@
 			path = WireFrame;
 			sourceTree = "<group>";
 		};
-		2C00B72424EC56F600CF7BCC /* Storyboard */ = {
+		2C00B73424ED688F00CF7BCC /* Sub Views */ = {
 			isa = PBXGroup;
 			children = (
-				2C00B72524EC570E00CF7BCC /* Splash.storyboard */,
+				2C00B73524ED68EB00CF7BCC /* CategoryListColCollectionViewCell.swift */,
+				2C00B73624ED68EB00CF7BCC /* CategoryListCollectionViewCell.xib */,
 			);
-			path = Storyboard;
-			sourceTree = "<group>";
-		};
-		2C00B72D24ED4F4D00CF7BCC /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				2C00B72B24ED4E6500CF7BCC /* CategoryList.storyboard */,
-			);
-			path = Storyboard;
+			path = "Sub Views";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -361,6 +374,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C00B6EE24EC212A00CF7BCC /* LaunchScreen.storyboard in Resources */,
+				2C00B74024ED970700CF7BCC /* ProductList.storyboard in Resources */,
+				2C00B73824ED68EB00CF7BCC /* CategoryListCollectionViewCell.xib in Resources */,
 				2C00B72C24ED4E6500CF7BCC /* CategoryList.storyboard in Resources */,
 				2C00B72A24ED416500CF7BCC /* splash.gif in Resources */,
 				2C00B6EB24EC212A00CF7BCC /* Assets.xcassets in Resources */,
@@ -383,13 +398,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C00B73324ED515100CF7BCC /* BaseViewController.swift in Sources */,
+				2C00B73E24ED96B000CF7BCC /* ProductListViewController.swift in Sources */,
 				2C00B72324EC56D800CF7BCC /* SpashViewController.swift in Sources */,
 				2C00B71424EC29C100CF7BCC /* Protocols.swift in Sources */,
 				2C00B6E224EC212400CF7BCC /* AppDelegate.swift in Sources */,
 				2C00B71624EC2A2800CF7BCC /* Common.swift in Sources */,
+				2C00B73724ED68EB00CF7BCC /* CategoryListColCollectionViewCell.swift in Sources */,
+				2C00B73C24ED7E8E00CF7BCC /* CategoryListViewModel.swift in Sources */,
 				2C00B71824EC4EBA00CF7BCC /* RootViewControllerDelegate.swift in Sources */,
 				2C00B72824ED32CB00CF7BCC /* SceneDelegate.swift in Sources */,
+				2C00B74224ED98E400CF7BCC /* ProductListWireFrame.swift in Sources */,
 				2C00B71224EC296400CF7BCC /* Networking.swift in Sources */,
+				2C00B73A24ED6A6E00CF7BCC /* CategoryDataModel.swift in Sources */,
 				2C00B72124EC539600CF7BCC /* SplashWireFrame.swift in Sources */,
 				2C00B71A24EC4FA600CF7BCC /* Constant.swift in Sources */,
 				2C00B72F24ED4F6F00CF7BCC /* CategoryListViewController.swift in Sources */,

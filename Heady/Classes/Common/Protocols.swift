@@ -7,3 +7,8 @@
 //
 
 import Foundation
+
+protocol CategoryListProtocol: AnyObject {
+    func updateDate()
+    func generateError(error: APIError?)
+}

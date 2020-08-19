@@ -13,8 +13,12 @@ import UIKit
 enum StoryboardScenes: String {
     case kSplashScreen              = "Splash"
     case kCategoryList              = "CategoryList"
-    case kProductList               = "productList"
+    case kProductList               = "ProductList"
     
+}
+
+enum CellIdentifires: String {
+    case kCategoryListCell = "CategoryListCollectionViewCell"
 }
 
 extension StoryboardScenes {
@@ -32,3 +36,38 @@ extension StoryboardScenes {
 }
  
 
+// generics type
+public enum Result<T, U> where U:Error{
+    case success(T)
+    case failure(U)
+}
+
+// custom error
+public enum APIError:Error{
+    
+    case failedRequest(String?)
+}
+
+// hTTPS methods type
+public enum HttpsMethod{
+    case Post
+    case Get
+    case Put
+    case Delate
+    
+    var localization:String{
+        switch self {
+        case .Post: return "POST"
+        case .Get: return "GET"
+        case .Put: return "PUT"
+        case .Delate: return "Delete"
+            
+        }
+        
+    }
+}
+
+// API url
+enum AppURL: String {
+    case categoryList = "https://stark-spire-93433.herokuapp.com/json"
+}
