@@ -60,6 +60,7 @@ extension CategoryListViewController: UICollectionViewDelegate {
         if let productList  = ProductListWireframe.makeProductListViewRootController() as? ProductListViewController ?? nil {
             productList.headerName = viewModel?.categoryList?.categories[indexPath.row].name
             productList.productList = viewModel?.categoryList?.categories[indexPath.row].products ?? []
+            productList.rangingProduct = viewModel?.categoryList?.rankings ?? []
             self.navigationController?.pushViewController(productList, animated: true)
         }
         

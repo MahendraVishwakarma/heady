@@ -86,21 +86,81 @@
                                 <rect key="frame" x="0.0" y="108" width="414" height="754"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzq-Xz-bIR">
+                                <rect key="frame" x="352" y="786" width="46" height="46"/>
+                                <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="E8D-sM-5gd"/>
+                                    <constraint firstAttribute="height" constant="46" id="JTk-Mr-WnS"/>
+                                </constraints>
+                                <state key="normal" image="filter">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnFilterTapped:" destination="GHg-vA-ARH" eventType="touchUpInside" id="dk4-JV-qPa"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0kk-Nz-4U4">
+                                <rect key="frame" x="0.0" y="862" width="414" height="0.0"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" verticalCompressionResistancePriority="749" translatesAutoresizingMaskIntoConstraints="NO" id="eXY-uV-VkE">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </pickerView>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qKF-hf-NLd">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="0.0"/>
+                                        <items>
+                                            <barButtonItem title="Cancel" id="jhg-aI-uVz">
+                                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="btnCancel:" destination="GHg-vA-ARH" id="ecH-XA-fzK"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="psC-O4-bzJ"/>
+                                            <barButtonItem title="Done" id="Cmc-EA-1x2">
+                                                <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="btnDone:" destination="GHg-vA-ARH" id="P2S-yt-fif"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="qKF-hf-NLd" firstAttribute="top" secondItem="0kk-Nz-4U4" secondAttribute="top" id="QrD-OI-pRZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="eXY-uV-VkE" secondAttribute="bottom" id="YgD-8M-PfR"/>
+                                    <constraint firstItem="eXY-uV-VkE" firstAttribute="top" secondItem="qKF-hf-NLd" secondAttribute="bottom" id="Yxq-uB-LMr"/>
+                                    <constraint firstAttribute="trailing" secondItem="qKF-hf-NLd" secondAttribute="trailing" id="fcA-bv-zLR"/>
+                                    <constraint firstItem="qKF-hf-NLd" firstAttribute="leading" secondItem="0kk-Nz-4U4" secondAttribute="leading" id="haO-KN-Uge"/>
+                                    <constraint firstAttribute="height" id="i7K-JQ-QQp"/>
+                                    <constraint firstAttribute="trailing" secondItem="eXY-uV-VkE" secondAttribute="trailing" id="kML-yd-cF9"/>
+                                    <constraint firstItem="eXY-uV-VkE" firstAttribute="leading" secondItem="0kk-Nz-4U4" secondAttribute="leading" id="yP0-Ig-SJ1"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="0kk-Nz-4U4" firstAttribute="bottom" secondItem="2cj-Dw-OVz" secondAttribute="bottom" id="7Vp-K5-q2n"/>
                             <constraint firstItem="wYg-eW-g6s" firstAttribute="leading" secondItem="2cj-Dw-OVz" secondAttribute="leading" id="EhU-Ob-bCf"/>
                             <constraint firstItem="uun-ve-0J9" firstAttribute="top" secondItem="2cj-Dw-OVz" secondAttribute="top" id="GRE-f0-gku"/>
                             <constraint firstItem="uun-ve-0J9" firstAttribute="leading" secondItem="d7c-SA-pRP" secondAttribute="leading" id="SG1-fS-auM"/>
                             <constraint firstItem="wYg-eW-g6s" firstAttribute="top" secondItem="uun-ve-0J9" secondAttribute="bottom" id="W3p-EY-zMX"/>
+                            <constraint firstItem="2cj-Dw-OVz" firstAttribute="trailing" secondItem="nzq-Xz-bIR" secondAttribute="trailing" constant="16" id="XzQ-7U-uoX"/>
                             <constraint firstItem="2cj-Dw-OVz" firstAttribute="trailing" secondItem="wYg-eW-g6s" secondAttribute="trailing" id="a4J-Fw-sDA"/>
+                            <constraint firstItem="2cj-Dw-OVz" firstAttribute="trailing" secondItem="0kk-Nz-4U4" secondAttribute="trailing" id="ebA-rN-xCr"/>
+                            <constraint firstItem="2cj-Dw-OVz" firstAttribute="bottom" secondItem="nzq-Xz-bIR" secondAttribute="bottom" constant="30" id="qSR-EN-bWT"/>
+                            <constraint firstItem="0kk-Nz-4U4" firstAttribute="leading" secondItem="2cj-Dw-OVz" secondAttribute="leading" id="qug-ee-Td9"/>
                             <constraint firstItem="2cj-Dw-OVz" firstAttribute="bottom" secondItem="wYg-eW-g6s" secondAttribute="bottom" id="rDR-iQ-3Cm"/>
                             <constraint firstAttribute="trailing" secondItem="uun-ve-0J9" secondAttribute="trailing" id="ssH-MU-1ok"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2cj-Dw-OVz"/>
                     </view>
                     <connections>
+                        <outlet property="filterButton" destination="nzq-Xz-bIR" id="8EP-OP-Nsu"/>
                         <outlet property="headerNAme" destination="aPD-fi-SIk" id="ZCQ-qx-WTb"/>
+                        <outlet property="heightContraints" destination="i7K-JQ-QQp" id="os3-XR-h7u"/>
+                        <outlet property="pickerView" destination="eXY-uV-VkE" id="Ck4-Cs-XIp"/>
                         <outlet property="productTableView" destination="wYg-eW-g6s" id="RM5-bh-SBF"/>
                     </connections>
                 </viewController>
@@ -112,5 +172,6 @@
     <resources>
         <image name="Logo" width="250" height="250"/>
         <image name="chevron.left" catalog="system" width="48" height="64"/>
+        <image name="filter" width="24" height="24"/>
     </resources>
 </document>
