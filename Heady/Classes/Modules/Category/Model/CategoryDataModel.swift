@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 // MARK: - ProcedureDetail Model
 struct CategoryDataList: Codable {
@@ -19,7 +20,7 @@ struct Category: Codable {
     let name: String
     let products: [CategoryProduct]
     let childCategories: [Int]
-
+    
     enum CodingKeys: String, CodingKey {
         case id, name, products
         case childCategories = "child_categories"
@@ -32,7 +33,7 @@ struct CategoryProduct: Codable {
     let name, dateAdded: String
     let variants: [Variant]
     let tax: Tax
-
+    
     enum CodingKeys: String, CodingKey {
         case id, name
         case dateAdded = "date_added"
@@ -65,11 +66,29 @@ struct Ranking: Codable {
 struct RankingProduct: Codable {
     let id: Int
     let viewCount, orderCount, shares: Int?
-
+    
     enum CodingKeys: String, CodingKey {
         case id
         case viewCount = "view_count"
         case orderCount = "order_count"
         case shares
+    }
+}
+
+
+class RealmModel : Object {
+    
+    @objc private dynamic var realmStoredData:Data? = nil
+    
+    var catObject : CategoryDataList? {
+        get {
+            if let data = realmStoredData {
+                return try? JSONDecoder().decode(CategoryDataList.self, from: data)
+            }
+            return nil
+        }
+        set {
+            realmStoredData = try? JSONEncoder().encode(newValue)
+        }
     }
 }

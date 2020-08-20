@@ -70,7 +70,6 @@ class ProductListViewController: BaseViewController {
             return subFilteredData.count > 0 ? true : false
         })
         
-        
         productTableView.reloadData()
     }
     
