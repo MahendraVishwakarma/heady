@@ -13,6 +13,7 @@ class CategoryListViewController: BaseViewController {
     @IBOutlet weak var categoryCollection: UICollectionView!
     var viewModel : CategoryListViewModel?
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +24,7 @@ class CategoryListViewController: BaseViewController {
     private func setupUI() {
         viewModel = CategoryListViewModel()
         viewModel?.delegate = self
+        activityIndicator.startAnimating()
         viewModel?.fetchData()
         
         categoryCollection.register(UINib(nibName: String(describing: CategoryListCollectionViewCell.self), bundle: nil), forCellWithReuseIdentifier: CellIdentifires.kCategoryListCell.rawValue)
@@ -88,6 +90,7 @@ extension CategoryListViewController: UICollectionViewDelegateFlowLayout {
 extension CategoryListViewController: CategoryListProtocol {
     func updateDate() {
         DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
             self.categoryCollection.reloadData()
         }
         
@@ -95,6 +98,10 @@ extension CategoryListViewController: CategoryListProtocol {
     
     func generateError(error: APIError?) {
         self.showToast(message: error?.localizedDescription ?? "")
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+            
+        }
     }
 }
 

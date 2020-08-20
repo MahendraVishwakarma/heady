@@ -67,20 +67,27 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="q9H-95-IAW">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="hHe-cI-iZM" firstAttribute="top" secondItem="hfy-8B-4WV" secondAttribute="bottom" id="5sb-SU-lzQ"/>
                             <constraint firstItem="YFF-jw-6vv" firstAttribute="bottom" secondItem="hHe-cI-iZM" secondAttribute="bottom" id="D9r-mq-Hnt"/>
                             <constraint firstItem="hfy-8B-4WV" firstAttribute="leading" secondItem="YFF-jw-6vv" secondAttribute="leading" id="TEE-S8-419"/>
+                            <constraint firstItem="q9H-95-IAW" firstAttribute="centerY" secondItem="mm9-vY-qgN" secondAttribute="centerY" id="a3K-en-jPo"/>
                             <constraint firstItem="hHe-cI-iZM" firstAttribute="leading" secondItem="YFF-jw-6vv" secondAttribute="leading" id="gjk-SE-b9U"/>
                             <constraint firstItem="YFF-jw-6vv" firstAttribute="trailing" secondItem="hHe-cI-iZM" secondAttribute="trailing" id="mXZ-cN-p3A"/>
+                            <constraint firstItem="q9H-95-IAW" firstAttribute="centerX" secondItem="mm9-vY-qgN" secondAttribute="centerX" id="mfm-0P-EnW"/>
                             <constraint firstItem="hfy-8B-4WV" firstAttribute="top" secondItem="YFF-jw-6vv" secondAttribute="top" id="onO-H8-aCk"/>
                             <constraint firstItem="YFF-jw-6vv" firstAttribute="trailing" secondItem="hfy-8B-4WV" secondAttribute="trailing" id="zol-fY-yNo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YFF-jw-6vv"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="q9H-95-IAW" id="GzL-1e-GNP"/>
                         <outlet property="categoryCollection" destination="hHe-cI-iZM" id="gZg-ZH-5mm"/>
                     </connections>
                 </viewController>
